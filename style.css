@@ -210,3 +210,45 @@ h3 {
   padding: 4px 40px;
   transform: translateY(-55%);
 }
+
+.about-section p {
+  margin: 2rem 6vw;
+  text-align: justify;
+}
+
+.small-text {
+  font-size: 0.8rem;
+}
+
+.small-text a {
+  color: #333;
+}
+
+.footer-section {
+  background-color: black;
+}
+
+.footer-section p,
+a {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.footer-section h3 {
+  color: white;
+
+  margin: 3rem 0 0 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-media-img-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
