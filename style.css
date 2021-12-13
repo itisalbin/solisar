@@ -17,6 +17,10 @@ h3 {
   font-weight: normal;
 }
 
+img {
+  display: block;
+}
+
 /*HERO SECTION*/
 .hero-section {
   width: 100%;
@@ -31,16 +35,22 @@ h3 {
   object-position: 88%;
 }
 
-.hero-text-container {
+.hero-p-container {
+  display: flex;
   width: 100%;
-  height: 50vh;
+  height: 50%;
+  align-items: center;
 }
 
-.hero-section p {
-  margin-left: 10%;
-  margin-top: 20%;
+.hero-p-mobile {
   font-size: 1.8em;
   line-height: 1.3em;
+  margin: 0;
+  transform: translateX(30%);
+}
+
+.hero-p-desktop {
+  display: none;
 }
 
 .header-container {
@@ -187,6 +197,7 @@ h3 {
   width: 80%;
   height: 80%;
   transform: translateY(-10%);
+  margin: auto;
 }
 
 .product-button p {
@@ -301,4 +312,25 @@ form button {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-p-mobile {
+    display: none;
+  }
+
+  .hero-p-container {
+    justify-content: center;
+    margin: 0 10%;
+    width: 80%;
+  }
+
+  .hero-p-desktop {
+    display: block;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.3em;
+    margin: 0;
+    text-align: center;
+    transform: translateY(-50%);
+  }
 }
