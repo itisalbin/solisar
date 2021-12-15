@@ -37,7 +37,7 @@ img {
 
 .hero-p-container {
   display: flex;
-  width: 100%;
+  width: 80%;
   height: 50%;
   align-items: center;
   margin-left: 11%;
@@ -119,6 +119,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 250px;
+  margin: auto;
 }
 .news-images-container {
   width: 100%;
@@ -127,6 +129,7 @@ img {
 }
 
 .news-images-container img {
+  object-fit: cover;
   width: 48.75%;
   display: flex;
   justify-content: space-between;
@@ -171,6 +174,7 @@ img {
   font-size: 3em;
   margin-left: 20px;
   margin-bottom: 10px;
+  font-size: 10vw;
 }
 
 .glasses-grid-container-parent {
@@ -205,7 +209,7 @@ img {
   bottom: 0;
   width: 100%;
   margin-bottom: 18%;
-  font-size: 1.2em;
+  font-size: clamp(1rem, 2.5vw, 2.5vw);
   font-weight: bold;
 }
 
@@ -227,8 +231,9 @@ img {
 }
 
 .about-section p {
-  margin: 2rem 6vw;
+  margin: 2rem 20px;
   text-align: justify;
+  max-width: 768px;
 }
 
 .small-text {
@@ -243,7 +248,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem;
+  padding: 6vw 4rem 4rem 4rem;
 }
 
 .join-list-section h3 {
@@ -284,21 +289,27 @@ form button {
   background-color: black;
 }
 
-.footer-section p {
+.footer-section p:not(.copyright) {
   color: white;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.2vw);
 }
 
 .footer-section a {
   color: white;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.2vw);
   margin: 1rem;
 }
 
 .footer-section h3 {
   color: white;
   margin: 3rem 0 0 0;
-  font-size: 2rem;
+
+  font-size: clamp(2rem, 4vw, 4vw);
+}
+
+.copyright {
+  color: white;
+  font-size: 0.8rem;
 }
 
 .footer-container {
@@ -311,7 +322,7 @@ form button {
 .social-media-img-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: clamp(1rem, 4vw, 10rem);
 }
 
 @media screen and (min-width: 768px) {
@@ -332,5 +343,27 @@ form button {
     margin: 0;
     text-align: center;
     transform: translateY(-50%);
+  }
+
+  .news-text-container {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .news-images-container {
+    height: 75vh;
+  }
+
+  .about-section p {
+    font-size: 1.3rem;
+  }
+
+  .join-list-section h3 {
+    font-size: 3rem;
+  }
+
+  button:not(.product-button) {
+    width: 216px;
+    height: 60px;
   }
 }
